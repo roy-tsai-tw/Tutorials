@@ -18,6 +18,8 @@ tar -zxvf systemc-2.3.3.tar.gz
 ## 3.Configure
 ```
 cd systemc-2.3.3
+mkdir objdir
+cd objdir
 ../configure --prefix=/usr/local/systemc-2.3.3
 ```
 ## 4.Make the library
