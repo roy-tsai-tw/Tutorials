@@ -91,7 +91,49 @@ sudo useradd -f 45 your_name
 ```
 sudo useradd -s /sbin/csh your_name
 ```
-
-
-
-
+## 網路管理
+### 允許(工作站主機)防火牆開啟特定port
+* 檢查某port是否有開啟
+```
+firewall-cmd --zone=public --list-all
+```
+* 加入特定port(底下範例為port 1234)
+```
+firewall-cmd --zone=public --add-port=1234/tcp --permanent
+```
+* 重新讀取firewall設定
+```
+firewall-cmd --reload
+```
+* 檢查該port是否已加入允許的list
+```
+firewall-cmd --zone=public --list-all
+```
+## 主機資訊
+### 查詢主機名稱
+* 顯示主機名稱
+```
+hostname -s
+```
+* 顯示主機的DNS網域名稱
+```
+hostname -d
+```
+* 顯示主機別名(if any)
+```
+hostname -a
+```
+### 更改主機名稱
+* 查詢主機設定
+```
+hostnamectl
+```
+* 更改主機名稱(範例改為: MyHost)
+```
+hostnamectl set-hostname MyHost
+```
+* 更改主機別名(參考hosts線上手冊)
+```
+In /etc/hosts:
+man hosts
+```
