@@ -48,6 +48,15 @@ gzip FileName
 ```
 tar zcvf FileName.tar.gz DirName
 ```
+### rpm下載及安裝
+* Download file from URL on Linux using command line
+```
+wget URL
+```
+* Install RPM
+```
+rpm -ivh package.rpm
+```
 ## 帳號管理
 ### 新增使用者
 *
@@ -137,3 +146,18 @@ hostnamectl set-hostname MyHost
 In /etc/hosts:
 man hosts
 ```
+## YUM Lock
+* Solve yum lock in CentOS 7
+```
+ps -ef | grep yum
+kill -9 PID_NUMBER or pkill PackageKit
+```
+  * Reference: (“Another app is currently holding the yum lock”)[https://www.thegeekdiary.com/yum-command-fails-with-another-app-is-currently-holding-the-yum-lock-in-centos-rhel-7/]
+
+
+
+
+
+```
+
+
