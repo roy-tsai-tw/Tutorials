@@ -152,7 +152,7 @@ man hosts
 ps -ef | grep yum
 kill -9 PID_NUMBER or pkill PackageKit
 ```
-  * Reference: (“Another app is currently holding the yum lock”)[https://www.thegeekdiary.com/yum-command-fails-with-another-app-is-currently-holding-the-yum-lock-in-centos-rhel-7/]
+  * Reference: [“Another app is currently holding the yum lock”](https://www.thegeekdiary.com/yum-command-fails-with-another-app-is-currently-holding-the-yum-lock-in-centos-rhel-7/)
 
 
 
