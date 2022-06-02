@@ -146,6 +146,19 @@ hostnamectl set-hostname MyHost
 In /etc/hosts:
 man hosts
 ```
+### 查看硬體資訊
+* 檢視CPU資訊
+```
+ cat /proc/cpuinfo
+```
+* 檢視Memory大小
+```
+free -g             <---GB
+```
+* 檢視Disk大小
+```
+df -h
+```
 ## YUM Lock
 * Solve yum lock in CentOS 7
 ```
