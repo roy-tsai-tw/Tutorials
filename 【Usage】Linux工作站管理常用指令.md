@@ -118,6 +118,27 @@ firewall-cmd --reload
 ```
 firewall-cmd --zone=public --list-all
 ```
+### 若EDA Tool的License突然無法使用
+* 常見原因1: Server license沒通
+  * 檢查LIC_SERVER對應的某port是否有開啟，若未開啟按照上面開啟port的方式開啟。
+  * 檢查TSRI對應的server是否可使用:
+```
+ping lstn
+telnet lstn 5280  <----- 如果ping lstn可通，用telnet確認port是否可用
+   1. Trying 140.110.117.10...   <-----表示server有通
+      Connected to lshc.
+      Escape character is '^]'.
+   2. Trying 140.110.117.10...   <-----表示server不通
+      telnet: connect to address 140.110.117.10: Connection refused
+   3. Trying 140.110.117.10... (卡在這一行) <-----表示自己主機防火牆的port沒開，要先去打開!
+```
+* 常見原因2: 有環境變數沒有設好，需要自己去check一下
+```
+echo $LM_LICENSE_FILE
+5280@lshc:27000@lsncku:26585@lsncku:26585@lscic:26585@lstn
+
+其他像是: $SOFT_HOME、$LM_LIBRARY_FILE...等
+```
 ## 主機資訊
 ### 查詢主機名稱
 * 顯示主機名稱
