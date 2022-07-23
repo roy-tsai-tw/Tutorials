@@ -37,7 +37,15 @@ cd lua-5.3.2
 make linux CFLAGS="-fPIC -DLUA_USE_LINUX" test
 sudo make install
 ```
-
+* Problems:
+ * Error messages:
+```
+lua.c:80:31: fatal error: readline/readline.h: No such file or directory
+```
+ * Solution:
+```
+yum install readline-devel
+```
 ### 4.安裝Perl
 ```
 wget -O YAML-1.24.tar.gz http://search.cpan.org/CPAN/authors/id/T/TI/TINITA/YAML-1.24.tar.gz
