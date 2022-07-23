@@ -1,7 +1,7 @@
 # NVDLA Installation On CentOS7
 This is an attempt to install NVDLA on CentOS7, which is used to run the NVDLA. 
 ## Virtual Simulator
-### 下載Virtual Simulator
+### 1.下載Virtual Simulator
 ```
 git clone https://github.com/nvdla/vp.git
 cd vp
@@ -18,16 +18,46 @@ git clone https://github.com/rth7680/qemu-palcode
   * 
 
 ## Dependencies
-### 安裝必要的tools和libraries
+### 1.安裝必要的tools和libraries
 ```
 sudo yum install cmake swig glib2-devel git pixman-devel boost-devel libattr-devel libpcap-devel 'perl(Data::Dumper)' 'perl(YAML)' 'perl(Capture::Tiny)' 'perl(XML::Simple)' java-1.7.0-openjdk-devel.x86_64 libtermcap-devel ncurses-devel libevent-devel readline-devel python-devel
 ```
-### 安裝SystemC 2.3.0
-* Please refer to [SystemC安裝指南]()
+### 2.安裝SystemC 2.3.0
+* Please refer to [SystemC安裝指南](https://github.com/Roy-Tsai-myaccount/Tutorials/blob/main/%E3%80%90Installation%E3%80%91SystemC.md)
+### 3.安裝Lua 5.3.2
+```
+curl -R -O http://www.lua.org/ftp/lua-5.3.2.tar.gz
+tar zxf lua-5.3.2.tar.gz
+cd lua-5.3.2
+make linux CFLAGS="-fPIC -DLUA_USE_LINUX" test
+sudo make install
+```
+
+### 4.安裝Perl
+```
+wget -O YAML-1.24.tar.gz http://search.cpan.org/CPAN/authors/id/T/TI/TINITA/YAML-1.24.tar.gz
+tar -xzvf YAML-1.24.tar.gz
+cd YAML-1.24
+perl Makefile.PL
+make
+sudo make install
+wget -O IO-Tee-0.65.tar.gz http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/IO-Tee-0.65.tar.gz
+tar -xzvf IO-Tee-0.65.tar.gz
+cd IO-Tee-0.65
+perl Makefile.PL
+make
+sudo make install
+```
 
 
-
-
+### 5.安裝NVDLA CMOD和VMOD
+```
+git clone https://github.com/nvdla/hw.git
+cd hw
+git reset --hard <HW verion index>    # HW versison must be matched with virtual simulator, refer to section 'HW verion index' of README.md in nvdla/vp
+make
+tools/bin/tmake -build cmod_top -build vmod
+```
 
 ## Reference 
 * [Virtual Platform On AWS FPGA](http://nvdla.org/vp_fpga.html)(Installation Steps for CentOS)
