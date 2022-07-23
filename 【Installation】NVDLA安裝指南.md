@@ -8,6 +8,10 @@ cd vp
 git submodule update --init --recursive
 ```
 * One submodule could not be cloned.
+```
+Clone of 'git://github.com/rth7680/qemu-palcode.git' into submodule path 'roms/qemu-palcode' failed
+Failed to recurse into submodule path 'libs/qbox'
+```
 * Solution: 
 ```
 git clone https://github.com/rth7680/qemu-palcode
