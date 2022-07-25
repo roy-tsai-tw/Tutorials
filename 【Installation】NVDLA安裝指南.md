@@ -61,6 +61,18 @@ perl Makefile.PL
 make
 sudo make install
 ```
+* Problems:
+ * Error messages:
+```
+[xx@xx]$ perl Makefile.PL
+Can't locate ExtUtils/MakeMaker.pm in @INC (@INC contains: /usr/loca                                   l/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /u                                   sr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at M                                   akefile.PL line 7.
+BEGIN failed--compilation aborted at Makefile.PL line 7.
+```
+ * Solution: 
+```
+yum install perl-CPAN
+```
+ * Reference: [編譯安裝時出現Can't locate ExtUtils/MakeMaker.pm](https://blog.xuite.net/tailsice/twblog/204924951-%E7%B7%A8%E8%AD%AF%E5%AE%89%E8%A3%9D%E6%99%82%E5%87%BA%E7%8F%BECan't+locate+ExtUtils%2FMakeMaker.pm#)
 
 
 ### 5.安裝NVDLA CMOD和VMOD
