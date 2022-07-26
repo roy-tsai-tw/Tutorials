@@ -8,19 +8,19 @@ cd vp
 git submodule update --init --recursive
 ```
 * One submodule could not be cloned.
-```
-Clone of 'git://github.com/rth7680/qemu-palcode.git' into submodule path 'roms/qemu-palcode' failed
-Failed to recurse into submodule path 'libs/qbox'
-```
-* Solution: 
-```
-git clone https://github.com/rth7680/qemu-palcode
-git submodule update --init --recursive
-```
-* Reference:
-  * [Git 基礎 - 取得一個 Git 倉儲](https://git-scm.com/book/zh-tw/v2/Git-%E5%9F%BA%E7%A4%8E-%E5%8F%96%E5%BE%97%E4%B8%80%E5%80%8B-Git-%E5%80%89%E5%84%B2)
-  * [“git submodule update --init --recursive” failed #480](https://github.com/riscv-collab/riscv-gnu-toolchain/issues/480)
-  * 
+  ```
+  Clone of 'git://github.com/rth7680/qemu-palcode.git' into submodule path 'roms/qemu-palcode' failed
+  Failed to recurse into submodule path 'libs/qbox'
+  ```
+  * Solution: 
+  ```
+  git clone https://github.com/rth7680/qemu-palcode
+  git submodule update --init --recursive
+  ```
+  * Reference:
+    * [Git 基礎 - 取得一個 Git 倉儲](https://git-scm.com/book/zh-tw/v2/Git-%E5%9F%BA%E7%A4%8E-%E5%8F%96%E5%BE%97%E4%B8%80%E5%80%8B-Git-%E5%80%89%E5%84%B2)
+    * [“git submodule update --init --recursive” failed #480](https://github.com/riscv-collab/riscv-gnu-toolchain/issues/480)
+    * 
 
 ## Dependencies
 ### 1.安裝必要的tools和libraries
@@ -38,14 +38,16 @@ make linux CFLAGS="-fPIC -DLUA_USE_LINUX" test
 sudo make install
 ```
 * Problems:
- * Error messages:
-```
-lua.c:80:31: fatal error: readline/readline.h: No such file or directory
-```
- * Solution:
-```
-yum install readline-devel
-```
+  * Error messages:  
+  ```
+  lua.c:80:31: fatal error: readline/readline.h: No such file or directory
+  ```
+  * Solution:
+  ```
+  yum install readline-devel
+  ```
+  * Reference: [解决编译错误：“readline/readline.h: No such file or directory”](https://nanxiao.me/readline-readline-h-no-such-file-or-directory/)
+  
 ### 4.安裝Perl
 ```
 wget -O YAML-1.24.tar.gz http://search.cpan.org/CPAN/authors/id/T/TI/TINITA/YAML-1.24.tar.gz
@@ -63,15 +65,15 @@ sudo make install
 ```
 * Problems:
  * Error messages:
-```
-[xx@xx]$ perl Makefile.PL
-Can't locate ExtUtils/MakeMaker.pm in @INC (@INC contains: /usr/loca                                   l/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /u                                   sr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at M                                   akefile.PL line 7.
-BEGIN failed--compilation aborted at Makefile.PL line 7.
-```
- * Solution: 
-```
-yum install perl-CPAN
-```
+  ```
+  [xx@xx]$ perl Makefile.PL
+  Can't locate ExtUtils/MakeMaker.pm in @INC (@INC contains: /usr/loca                                   l/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /u                                   sr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at M                                   akefile.PL line 7.
+  BEGIN failed--compilation aborted at Makefile.PL line 7.
+  ```
+  * Solution: 
+  ```
+  yum install perl-CPAN
+  ```
  * Reference: [編譯安裝時出現Can't locate ExtUtils/MakeMaker.pm](https://blog.xuite.net/tailsice/twblog/204924951-%E7%B7%A8%E8%AD%AF%E5%AE%89%E8%A3%9D%E6%99%82%E5%87%BA%E7%8F%BECan't+locate+ExtUtils%2FMakeMaker.pm#)
 
 
