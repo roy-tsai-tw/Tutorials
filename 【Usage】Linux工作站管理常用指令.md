@@ -57,6 +57,16 @@ wget URL
 ```
 rpm -ivh package.rpm
 ```
+### 查看軟體目錄(以gcc舉例)
+* 查看軟體安裝目錄
+```
+whereis gcc
+```
+* 查看軟體執行目錄
+```
+which gcc
+```
+* rpm & deb packages: [linux下查看软件安装路径](https://blog.csdn.net/liufuchun111/article/details/80402109)
 ## 帳號管理
 ### 新增使用者
 *
