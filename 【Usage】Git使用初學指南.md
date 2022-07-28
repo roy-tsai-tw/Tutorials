@@ -35,7 +35,16 @@
   git push -u origin main     (The default branch name on GitHub now is main.)
   ```
 * Then you will see all files in the repository on the github.
- 
+* Reference:
+  *  [新手也能懂的Git教學](https://medium.com/@flyotlin/%E6%96%B0%E6%89%8B%E4%B9%9F%E8%83%BD%E6%87%82%E7%9A%84git%E6%95%99%E5%AD%B8-c5dc0639dd9)
+  *  [1.6 開始 - 初次設定 Git](https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-%E5%88%9D%E6%AC%A1%E8%A8%AD%E5%AE%9A-Git)
+  *  [2.5 Git 基礎 - 與遠端協同工作](https://git-scm.com/book/zh-tw/v2/Git-%E5%9F%BA%E7%A4%8E-%E8%88%87%E9%81%A0%E7%AB%AF%E5%8D%94%E5%90%8C%E5%B7%A5%E4%BD%9C)
+  *  [Git 常见错误 之 error: src refspec xxx does not match any / error: failed to push some refs to 简单解决方法](https://blog.csdn.net/u014361280/article/details/109703556)
+  *  [github上传时出现error: src refspec master does not match any解决办法继续海阔天空](https://www.jianshu.com/p/8d26730386f3)
+  *  [Git & GitHub (1) 最初階的基本操作](https://ithelp.ithome.com.tw/articles/10285329)
+
+
+
 ##
 
 
