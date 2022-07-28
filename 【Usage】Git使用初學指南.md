@@ -11,7 +11,7 @@
 * Install Git.
 * Create a folder where your codes are in it.
 * Right click and click "Git Bash Here":
-()[]
+![git-bash](https://github.com/roy-tsai-tw/Reconfigurable-Architecture/blob/main/images/git_bash.png)
 * Enter the followings in the git bash:
   ```
   git init                    (Initialize a git repository in your local machine.)
