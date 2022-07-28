@@ -42,6 +42,8 @@
   *  [Git 常见错误 之 error: src refspec xxx does not match any / error: failed to push some refs to 简单解决方法](https://blog.csdn.net/u014361280/article/details/109703556)
   *  [github上传时出现error: src refspec master does not match any解决办法继续海阔天空](https://www.jianshu.com/p/8d26730386f3)
   *  [Git & GitHub (1) 最初階的基本操作](https://ithelp.ithome.com.tw/articles/10285329)
+  *  [Git 與 Github 版本控制基本指令與操作入門教學](https://blog.techbridge.cc/2018/01/17/learning-programming-and-coding-with-python-git-and-github-tutorial/)
+  *  
 
 
 
