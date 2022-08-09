@@ -14,8 +14,6 @@ git submodule update --init --recursive
   ```
   * Solution: 
   ```
-  //git clone https://github.com/rth7680/qemu-palcode
-  //sudo yum install qemu
   [vp] cd libs/qbox/roms
   [roms] git clone https://github.com/rth7680/qemu-palcode
   [roms] cd ..
@@ -24,7 +22,8 @@ git submodule update --init --recursive
   * Reference:
     * [Git 基礎 - 取得一個 Git 倉儲](https://git-scm.com/book/zh-tw/v2/Git-%E5%9F%BA%E7%A4%8E-%E5%8F%96%E5%BE%97%E4%B8%80%E5%80%8B-Git-%E5%80%89%E5%84%B2)
     * [“git submodule update --init --recursive” failed #480](https://github.com/riscv-collab/riscv-gnu-toolchain/issues/480)
-    * 
+    * [Build kernel and boot with QEMU - emutyworks/DevTerm-R01 Wiki](https://github-wiki-see.page/m/emutyworks/DevTerm-R01/wiki/Build-kernel-and-boot-with-QEMU)
+    * [Git: git clone --recursive不完整解决方案](https://blog.csdn.net/felaim/article/details/105690980)
 
 ## Dependencies
 ### 1.安裝必要的tools和libraries
