@@ -152,23 +152,27 @@ make
 ```
 * Problems: 
   * zlib not installed 
-  ```
-  [  4%] Creating directories for 'qbox'
-  [  5%] No download step for 'qbox'
-  [  7%] No update step for 'qbox'
-  [  8%] No force-build step for 'qbox'
-  [  8%] No patch step for 'qbox'
-  [ 10%] Performing configure step for 'qbox'
+    ```
+    [  4%] Creating directories for 'qbox'
+    [  5%] No download step for 'qbox'
+    [  7%] No update step for 'qbox'
+    [  8%] No force-build step for 'qbox'
+    [  8%] No patch step for 'qbox'
+    [ 10%] Performing configure step for 'qbox'
 
-  ERROR: zlib check failed
-         Make sure to have the zlib libs and headers installed                                 .
+    ERROR: zlib check failed
+           Make sure to have the zlib libs and headers installed.
 
-  make[2]: *** [libs/qbox.build/stampdir/qbox-configure] Error                                  1
-  make[1]: *** [CMakeFiles/qbox.dir/all] Error 2
-  make: *** [all] Error 2
+    make[2]: *** [libs/qbox.build/stampdir/qbox-configure] Error1
+    make[1]: *** [CMakeFiles/qbox.dir/all] Error 2
+    make: *** [all] Error 2
 
-  ```
-  * S
+    ```
+    * Solution: sudo yum install zlib-devel
+  * ERROR: glib-2.22 gthread-2.0 is required to compile QEMU
+    * Solution:  yum install glib2-devel
+  * 
+
 
 ## Reference 
 * [Virtual Platform On AWS FPGA](http://nvdla.org/vp_fpga.html)(Installation Steps for CentOS)
