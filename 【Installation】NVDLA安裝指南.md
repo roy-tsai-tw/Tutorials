@@ -93,6 +93,7 @@ tools/bin/tmake -build cmod_top -build vmod
 ### 6.安裝Virtual Platform
 * 注意: 文檔裡面有寫vp/built/這個資料夾，可能是早期的版本才有。目前的版本是在/vp/src/資料夾。
 ```
+cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=/usr/local/systemc-2.3.0/ -DNVDLA_HW_PREFIX=/home/roy/NVDLA/hw -DNVDLA_HW_PROJECT=nv_full
 
 ```
 * Problems
