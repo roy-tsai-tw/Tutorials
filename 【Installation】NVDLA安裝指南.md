@@ -95,8 +95,38 @@ tools/bin/tmake -build cmod_top -build vmod
 ```
 
 ```
+* Problems
+  * Boost not found.
+  ```
+    [vp]$ cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=/usr/local/systemc-2.3.0/ -DNVDLA_HW_PREFIX=/home/roy/NVDLA/hw -DNVDLA_HW_PROJECT=nv_full
+    -- Searching for SystemC
+    -- SystemC version = 2.3.0
+    -- SystemC library = /usr/local/systemc-2.3.0/lib-linux64/libsystemc.so
+    -- Searching for TLM
+    running ls /usr/local/systemc-2.3.0/include/tlm.h 2>&1
+    /usr/local/systemc-2.3.0/include/tlm.h
+    -- TLM library = /usr/local/systemc-2.3.0/include/tlm.h
+    -- Searching for NVDLA CMOD
+    -- NVDLA HW VERSION = nvdla_os_initial
+    -- NVDLA CMOD include directory = /home/roy/NVDLA/hw/outdir/nv_full/cmod/release/include
+    -- NVDLA CMOD library directory = /home/roy/NVDLA/hw/outdir/nv_full/cmod/release/lib
+    -- NVDLA CMOD library = /home/roy/NVDLA/hw/outdir/nv_full/cmod/release/lib/libnvdla_cmod.so
+    -- Searching for SystemC
+    -- SystemC version = 2.3.0
+    -- SystemC library = /usr/local/systemc-2.3.0/lib-linux64/libsystemc.so
+    -- Searching for TLM
+    running ls /usr/local/systemc-2.3.0/include/tlm.h 2>&1
+    /usr/local/systemc-2.3.0/include/tlm.h
+    -- TLM library = /usr/local/systemc-2.3.0/include/tlm.h
+    -- Could NOT find Boost
+    CMake Error at libs/greenlib/CMakeLists.txt:44 (message):
+      Boost library not found.
 
 
+    -- Configuring incomplete, errors occurred!
+    See also "/home/roy/NVDLA/vp/CMakeFiles/CMakeOutput.log".
+  ```
+  * Solution:  sudo yum install boost-devel
 ## Reference 
 * [Virtual Platform On AWS FPGA](http://nvdla.org/vp_fpga.html)(Installation Steps for CentOS)
 * 
