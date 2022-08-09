@@ -122,12 +122,31 @@ cmake -DCMAKE_INSTALL_PREFIX=build -DSYSTEMC_PREFIX=/usr/local/systemc-2.3.0/ -D
     -- Could NOT find Boost
     CMake Error at libs/greenlib/CMakeLists.txt:44 (message):
       Boost library not found.
+      
+      
+    -- Configuring incomplete, errors occurred!
+    See also "/home/roy/NVDLA/vp/CMakeFiles/CMakeOutput.log".
+  ```
+  * Solution:  sudo yum install boost-devel
+  * Python not found.
+  ```
+      running ls /usr/local/systemc-2.3.0/include/tlm.h 2>&1
+    /usr/local/systemc-2.3.0/include/tlm.h
+    -- TLM library = /usr/local/systemc-2.3.0/include/tlm.h
+    -- Boost version: 1.53.0
+    CMake Error at /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:108 (message):
+      Could NOT find PythonLibs (missing: PYTHON_LIBRARIES PYTHON_INCLUDE_DIRS)
+    Call Stack (most recent call first):
+      /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake:315 (_FPHSA_FAILURE_MESSAGE)
+      /usr/share/cmake/Modules/FindPythonLibs.cmake:197 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+      libs/greenlib/CMakeLists.txt:52 (find_package)
 
 
     -- Configuring incomplete, errors occurred!
     See also "/home/roy/NVDLA/vp/CMakeFiles/CMakeOutput.log".
   ```
-  * Solution:  sudo yum install boost-devel
+  * Solution: sudo yum install python-devel
+
 ## Reference 
 * [Virtual Platform On AWS FPGA](http://nvdla.org/vp_fpga.html)(Installation Steps for CentOS)
 * 
