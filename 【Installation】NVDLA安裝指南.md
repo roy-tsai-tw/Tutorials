@@ -78,7 +78,7 @@ sudo make install
   * Reference: [編譯安裝時出現Can't locate ExtUtils/MakeMaker.pm](https://blog.xuite.net/tailsice/twblog/204924951-%E7%B7%A8%E8%AD%AF%E5%AE%89%E8%A3%9D%E6%99%82%E5%87%BA%E7%8F%BECan't+locate+ExtUtils%2FMakeMaker.pm#)
 
 
-### 5.安裝NVDLA CMOD和VMOD
+### 5.下載和產生NVDLA CMOD和VMOD
 ```
 git clone https://github.com/nvdla/hw.git
 cd hw
@@ -86,6 +86,13 @@ git reset --hard <HW verion index>    # HW versison must be matched with virtual
 make
 tools/bin/tmake -build cmod_top -build vmod
 ```
+
+### 6.安裝Virtual Platform
+* 注意: 文檔裡面有寫vp/built/這個資料夾，可能是早期的版本才有。目前的版本是在/vp/src/資料夾。
+```
+
+```
+
 
 ## Reference 
 * [Virtual Platform On AWS FPGA](http://nvdla.org/vp_fpga.html)(Installation Steps for CentOS)
