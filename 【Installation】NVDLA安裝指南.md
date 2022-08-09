@@ -16,8 +16,9 @@ git submodule update --init --recursive
   ```
   //git clone https://github.com/rth7680/qemu-palcode
   //sudo yum install qemu
-  [vp] cd libs/qbox
-  [qbox] git clone https://github.com/rth7680/qemu-palcode.git 
+  [vp] cd libs/qbox/roms
+  [roms] git clone https://github.com/rth7680/qemu-palcode
+  [roms] cd ..
   [qbox]git submodule update --init --recursive
   ```
   * Reference:
