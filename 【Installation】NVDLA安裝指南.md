@@ -15,8 +15,10 @@ git submodule update --init --recursive
   * Solution: 
   ```
   //git clone https://github.com/rth7680/qemu-palcode
-  sudo yum install qemu
-  git submodule update --init --recursive
+  //sudo yum install qemu
+  [vp] cd libs/qbox
+  [qbox] git clone https://github.com/rth7680/qemu-palcode.git 
+  [qbox]git submodule update --init --recursive
   ```
   * Reference:
     * [Git 基礎 - 取得一個 Git 倉儲](https://git-scm.com/book/zh-tw/v2/Git-%E5%9F%BA%E7%A4%8E-%E5%8F%96%E5%BE%97%E4%B8%80%E5%80%8B-Git-%E5%80%89%E5%84%B2)
