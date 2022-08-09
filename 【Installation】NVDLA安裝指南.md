@@ -14,7 +14,8 @@ git submodule update --init --recursive
   ```
   * Solution: 
   ```
-  git clone https://github.com/rth7680/qemu-palcode
+  //git clone https://github.com/rth7680/qemu-palcode
+  sudo yum install qemu
   git submodule update --init --recursive
   ```
   * Reference:
