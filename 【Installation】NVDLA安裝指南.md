@@ -172,8 +172,37 @@ make
   * ERROR: glib-2.22 gthread-2.0 is required to compile QEMU
     * Solution:  yum install glib2-devel
   * 
+```
+make install
+```
+### Running Virtual Platform
+```
+export SC_SIGNAL_WRITE_CHECK=DISABLE
+./build/bin/aarch64_toplevel -c conf/aarch64_nvdla.lua
+```
+* Problems:
+  * Error message:
+  ```
+  [vp]$ ./build/bin/aarch64_toplevel -c conf/aarch64_nvdla.lua
 
+             SystemC 2.3.0-ASI --- Jul 24 2022 01:36:02
+        Copyright (c) 1996-2012 by all Contributors,
+        ALL RIGHTS RESERVED
 
+  No sc_log specified, will use the default setting
+  verbosity_level = SC_MEDIUM
+  DMI mode enable
+  RAM base address: 0xc0000000
+  bridge: tlm2c_elaborate..
+  toplevel: -device virtio-9p-device,fsdev=r,mount_tag=r: 'virtio-9p-device' is not a valid device model name
+  ```
+  * Solution: Install two 9p virtio dependices
+  ``` 
+  sudo yum install -y libcap-devel
+  sudo yum install -y libattr-devel
+
+  ```
+    *  
 ## Reference 
 * [Virtual Platform On AWS FPGA](http://nvdla.org/vp_fpga.html)(Installation Steps for CentOS)
 * 
