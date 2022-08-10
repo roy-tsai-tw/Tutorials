@@ -196,13 +196,53 @@ export SC_SIGNAL_WRITE_CHECK=DISABLE
   bridge: tlm2c_elaborate..
   toplevel: -device virtio-9p-device,fsdev=r,mount_tag=r: 'virtio-9p-device' is not a valid device model name
   ```
-  * Solution: Install two 9p virtio dependices
+  * Solution: The qemu-virtio dependices are not installed. Install two 9p virtio dependices.
   ``` 
   sudo yum install -y libcap-devel
   sudo yum install -y libattr-devel
-
   ```
-    *  
+
+```
+Welcome to Buildroot
+buildroot login: root
+Password:
+
+Running Examples: 
+Example 1:
+Enter:
+# mount -t 9p -o trans=virtio r /mnt
+# cd /mnt/tests/hello
+# ./aarch64_hello
+
+Output:
+Hello World!
+
+Example 2:
+Enter:
+# cd nvdla_bdma_mmio/
+# ./aarch64_nvdla_bdma_mmio
+
+Output:
+Start programming...
+Write reg 0x00004004, value 0x00000000
+Write reg 0x00004000, value 0xc0000000
+Write reg 0x0000400c, value 0x00000000
+Write reg 0x00004008, value 0xc00017c0
+Write reg 0x0000402c, value 0x00000800
+Write reg 0x00004020, value 0x00000100
+Write reg 0x00004028, value 0x00000800
+Write reg 0x0000401c, value 0x00000100
+Write reg 0x00004024, value 0x00000000
+Write reg 0x00004018, value 0x00000007
+Write reg 0x00004010, value 0x00000007
+Write reg 0x00004014, value 0x00000003
+Write reg 0x00004030, value 0x00000001
+Write reg 0x00004034, value 0x00000001
+Finish programming...
+
+Get BDMA interrupt ...
+```
+
 ## Reference 
 * [Virtual Platform On AWS FPGA](http://nvdla.org/vp_fpga.html)(Installation Steps for CentOS)
 * 
