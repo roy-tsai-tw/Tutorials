@@ -70,7 +70,7 @@ which gcc
 ### 軟體依賴項安裝(以libXt為例)
 * 錯誤訊息
 ```
-Exception in thread "main" java.lang.UnsatisfiedLinkError: /usr/cad/arm/CBDK_TSMC90GUTM_Arm                                                                           _f1.0/orig_lib/aci/rf_2p_adv/lib/linux/j2re1.4.2_04/lib/i386/libawt.so: libXp.so.6: cannot open shared object file: No such file or directory
+Exception in thread "main" java.lang.UnsatisfiedLinkError: /usr/cad/arm/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/rf_2p_adv/lib/linux/j2re1.4.2_04/lib/i386/libawt.so: libXp.so.6: cannot open shared object file: No such file or directory                                                                     
 ```
  * 解決方法: 安裝i686版本的依賴項(centos 7中.i686後綴的是對應i386的軟體)
  ```
