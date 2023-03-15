@@ -4,7 +4,7 @@
 
 ## EDA Tools: Command Not Found 
 
-### Formal LEC
+### Conformal LEC
 * Solution: 
   * Change the following command in /usr/cad/cadence/CIC/confrml.cshrc file:  
 ```
