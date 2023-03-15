@@ -3,12 +3,10 @@
 
 
 ## EDA Tools: Command Not Found 
-### Incisive
-
-### JasperGold
 
 ### Formal LEC
-* Solution: Change the following command in forml.cshrc file:
+* Solution: 
+  * Change the following command in /usr/cad/cadence/CIC/confrml.cshrc file:  
 ```
 set bin_prefix 	= "tools/bin"
 
@@ -17,4 +15,8 @@ set bin_prefix 	= "tools/bin"
               
 set bin_prefix 	= "bin"
 ```
-
+  * You may also need to install another tool called lsb:
+```
+sudo yum install -y redhat-lsb
+```
+  * Reference:[CentOS 7 命令lsb_release: command not found解决方案](https://blog.csdn.net/xufengzhu/article/details/73330741)
