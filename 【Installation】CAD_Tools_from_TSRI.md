@@ -17,6 +17,4 @@ set bin_prefix 	= "tools/bin"
               
 set bin_prefix 	= "bin"
 ```
-```
-mkdir folder
-```
+
