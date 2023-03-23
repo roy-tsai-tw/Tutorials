@@ -28,5 +28,5 @@ Counter |  Total | Starts | Average |     Raw
   then the table will show up automatically. 
 
 ## Problem 2. Some Findings about LiteX
-* The file "generate_renode_scripts.py" in the path "~/CFU-Playground/scripts/" is the script to generate the file "digilent_arty.resc" in the folder "~/CFU-Playground/proj/my_first_cfu/build/renode/".
-* The file "core.py" in "~/CFU-Playground/third_party/python/litex/litex/soc/cores/cpu/vexriscv/" is the VexRiscV CPU python model in LiteX.
+* The file "generate_renode_scripts.py" in the path " /home/usr_name/CFU-Playground/scripts/ " is the script to generate the file "digilent_arty.resc" in the folder "/home/usr_name/CFU-Playground/proj/my_first_cfu/build/renode/".
+* The file "core.py" in "/home/usr_name/CFU-Playground/third_party/python/litex/litex/soc/cores/cpu/vexriscv/" is the VexRiscV CPU python model in LiteX.
