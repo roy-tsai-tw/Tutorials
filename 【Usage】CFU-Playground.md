@@ -30,3 +30,16 @@ Counter |  Total | Starts | Average |     Raw
 ## Problem 2. Some Findings about LiteX
 * The file "generate_renode_scripts.py" in the path " /home/usr_name/CFU-Playground/scripts/ " is the script to generate the file "digilent_arty.resc" in the folder "/home/usr_name/CFU-Playground/proj/my_first_cfu/build/renode/".
 * The file "core.py" in "/home/usr_name/CFU-Playground/third_party/python/litex/litex/soc/cores/cpu/vexriscv/" is the VexRiscV CPU python model in LiteX.
+
+## Problem 3. Some errors I've encountered during make renode/make load phase after changing a big model for profiling on VexRiscv. 
+* The following are some errors you may see from the terminal:
+```
+TfLiteStatus invoke_status = interpreter.Invoke(); Failed
+Model allocation started before finishing previously allocated model.
+```
+* Solution: Change the size of kTensorArenaSize in "/home/user_name/CFU-Playground/common/src/tflite.cc" to make it bigger, i.e. from 15 * 1024 to 60 * 1024.
+
+## Problem 4. Make renode failed with the message "c++: fatal error: Killed signal terminated program cc1plus."
+* The reason is that your modle is too big such that your RAM is not enough for compiling.
+* Solution: Wait it until it stop and make renode again, then it will continue to compile other C files.
+
