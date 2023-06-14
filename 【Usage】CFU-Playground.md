@@ -30,6 +30,8 @@ Counter |  Total | Starts | Average |     Raw
 ## Problem 2. Some Findings about LiteX
 * The file "generate_renode_scripts.py" in the path " /home/usr_name/CFU-Playground/scripts/ " is the script to generate the file "digilent_arty.resc" in the folder "/home/usr_name/CFU-Playground/proj/my_first_cfu/build/renode/".
 * The file "core.py" in "/home/usr_name/CFU-Playground/third_party/python/litex/litex/soc/cores/cpu/vexriscv/" is the VexRiscV CPU python model in LiteX.
+* The file "./soc/build/digilent_arty.my_first_cfu/gateware/digilent_arty.v" is the top soc module before synthesis.
+* The file "./soc/build/digilent_arty.my_first_cfu/csr.json" records the memory mapping of all components on liteX SoC.
 
 ## Problem 3. Some errors I've encountered during make renode/make load phase after changing a big model for profiling on VexRiscv. 
 * The following are some errors you may see from the terminal:
