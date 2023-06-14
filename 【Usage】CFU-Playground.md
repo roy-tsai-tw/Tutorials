@@ -32,6 +32,7 @@ Counter |  Total | Starts | Average |     Raw
 * The file "core.py" in "/home/usr_name/CFU-Playground/third_party/python/litex/litex/soc/cores/cpu/vexriscv/" is the VexRiscV CPU python model in LiteX.
 * The file "./soc/build/digilent_arty.my_first_cfu/gateware/digilent_arty.v" is the top soc module before synthesis.
 * The file "./soc/build/digilent_arty.my_first_cfu/csr.json" records the memory mapping of all components on liteX SoC.
+* The file "./third_party/python/litex/litex/soc/integration/soc.py" and "./third_party/python/litex/litex/soc/integration/builder.py" are used in "./soc/board_specific_workflows/digilent_arty.py" to generate the SoC. All components in the SoC are defined in the file "./third_party/python/litex/litex/soc/integration/soc_core.py". If any component is not used, deleted the component by Python args.   
 
 ## Problem 3. Some errors I've encountered during make renode/make load phase after changing a big model for profiling on VexRiscv. 
 * The following are some errors you may see from the terminal:
